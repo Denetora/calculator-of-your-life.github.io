@@ -45,7 +45,7 @@ a:hover{
 	border-bottom:8px ridge #00c934;
 	background:#000;
 	border-radius:0 0 250px 250px;
-	opacity:0.8;
+	
 }
 
 .logo{
@@ -98,14 +98,14 @@ a:hover{
 	border-radius:40px;
 	min-height:1000px;
 	background: #000;
-	opacity:0.9;
+	
 }
 .inner-footer{
 	border-top:8px ridge #00c934;	
 	border-radius:250px 250px 0 0;
 	height:100px;
 	background: #000;
-	opacity:0.9;
+	
 }
 
 #corect{
