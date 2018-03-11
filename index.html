@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html>
+
+<HEAD>
+
+	<title>Калькулятор твоей жизни</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href ="Slyles.css">
+	<link href="https://image.flaticon.com/icons/png/512/192/192874.png" rel="shortcut icon" type="image/x-icon"/>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="Script.js"></script>
+
+</HEAD>
+
+<body>
+
+	<div id="all">
+			
+			<header>
+				<div class="inner-header">	
+					<div class="logo">
+						<strong><h1>Калькулятор твоей жизни</h1></strong>
+					</div>
+				</div>
+			</header>
+			
+		<div class="clearfix">
+		
+			<div class="sidebar_left">
+				<div class="inner-sidebar_left">
+				</div>
+			</div>
+				
+				<div class="content">
+				
+					<div class="inner-content">
+					
+						<div id = "info">Введите свою дату рождения в первую строку, а сегодняшнюю во вторую!</div>
+							<div id = "corect">
+								
+									<div class= "probel">
+										<strong>Начальная дата:</strong>
+											<input size="2" maxlength="2" id="day1" value="1">
+													<select id="month1" size="1">
+														<option class="opt">января</option>
+														<option class="opt">февраля</option>
+														<option class="opt">марта</option>
+														<option class="opt">апреля</option>
+														<option class="opt">мая</option>
+														<option class="opt">июня</option>
+														<option class="opt">июля</option>
+														<option class="opt">августа</option>
+														<option class="opt">сентября</option>
+														<option class="opt">октября</option>
+														<option class="opt">ноября</option>
+														<option class="opt">декабря</option>
+													</select>
+											<input size="2" maxlength="4" id="year1" value="2000"><br/>
+									</div>
+										
+									<div class= "probel">
+										<strong>Конечная дата:</strong>						
+											<input size="2" maxlength="2" id="day2" value="1">
+												<select id="month2" size="1">
+													<option class="opt">января</option>
+													<option class="opt">февраля</option>
+													<option class="opt">марта</option>
+													<option class="opt">апреля</option>
+													<option class="opt">мая</option>
+													<option class="opt">июня</option>
+													<option class="opt">июля</option>
+													<option class="opt">августа</option>
+													<option class="opt">сентября</option>
+													<option class="opt">октября</option>
+													<option class="opt">ноября</option>
+													<option class="opt">декабря</option>
+												</select>
+											<input size="2" maxlength="4" id="year2" value="2000"> 	</br>
+									</div>
+								
+										<div class = "probel">
+											<strong>Сколько часов в день Вы работаете: </strong>	
+											<input size="2" maxlength="2" id = "hour_work" class = "inputs" value="0"></br>
+										</div>
+
+										<div class = "probel">
+											<strong>Сколько лет Вы работаете: </strong>	
+											<input size="2" maxlength="2" id = "year_work" class = "inputs" value="0"></br>
+										</div>
+											
+										<div class = "probel">	
+											<strong>Какая у вас зарплата в месяц: </strong>	
+											<input size="7" maxlength="10" id = "kol_money_month" class = "inputs" value="0"></br>	
+										</div>
+										
+										<div class = "probel">	
+											<strong>Сколько, примерно, часов Вы спите в сутки: </strong> 
+											<input size="2" maxlength="2" id = "sleep_hour" class = "inputs" value="0"></br></br>
+										</div>
+											
+								
+								
+								<div id="message-box" opendiv=""></div>
+								
+								<div>
+									
+									
+									<strong>Количество дней, которое Вы прожили:</strong> <div id = "dot1" iddiv="box_1" class="message"></div>
+									<div id = "result1" class = "result">0</div></br>
+									
+									<strong>Примерное количество часов сна за всю Вашу жизнь: </strong>	<div id = "dot2" iddiv="box_2" class="message"></div>
+									<div id = "result2" class = "result">0</div></br>
+									
+									<strong>Сколько, примерно, Вы заработали за все время трудоустройства: </strong>	<div id = "dot3" iddiv="box_3" class="message"></div>
+									<div id = "result3" class = "result">0</div></br>
+									
+									<strong>Сколько, примерно, с Вашей зарплаты перечислено налога НДФЛ за все время трудоустройства: </strong>	<div id = "dot4" iddiv="box_4" class="message"></div>
+									<div id = "result4" class = "result">0</div></br>
+									
+									<strong>Час Вашей жизни на работе стоит: </strong>	<div id = "dot5" iddiv="box_5" class="message"></div>
+									<div id = "result5" class = "result">0</div></br>
+									
+									<strong>Час Вашей жизни будет стоить: </strong>	<div id = "dot6" iddiv="box_6" class="message"></div>
+									<div id = "result6" class = "result">0</div></br>
+									
+									<strong>Примерное количество дней на работе:  </strong>	<div id = "dot7" iddiv="box_7" class="message"></div>
+									<div id = "result7" class = "result">0</div></br>
+									
+									<strong>Примерное количество часов на работе: </strong>	<div id = "dot8" iddiv="box_8" class="message"></div>
+									<div id = "result8" class = "result">0</div></br>
+									
+									<strong>Примерное количество cвободных дней от работы за все время трудоустройства: </strong>	<div id = "dot9" iddiv="box_9" class="message"></div>
+									<div id = "result9" class = "result">0</div></br>
+									
+									<strong>Примерное количество cвободных часов от работы за все время трудоустройства: </strong>	<div id = "dot10" iddiv="box_10" class="message"></div>
+									<div id = "result10" class = "result">0</div></br>
+
+
+
+									
+								</div>
+									 
+									<div id="box_1" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Учитываются високосные дни!
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									 
+									 
+									<div id="box_2" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											<div align="center">
+												<br/>В среднем человек должен спать 8 часов в сутки.
+												<br/><br/>
+												
+												<div style="width:100px" align="center" class="answer">OK</div>
+												 
+											</div>
+										</div>
+									</div>
+									
+									<div id="box_3" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Это начисленная зарплата без вычета налога НДФЛ.
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_4" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Налог НДФЛ составляет 13% от Вашей заработной платы.
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_5" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>В месяце ≈ 21 рабочий день.</br> [зарплата] / [время на работе за 21 день] = [цена часа на работе].
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_6" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>В месяце ≈ 720 часов.</br>[зарплата] / [720 часов] = [цена часа жизни].
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									
+									<div id="box_7" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Учитываются праздничные, выходные дни и 28 дней отпуска. Всего их в сумме 146 в году.
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_8" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Учитываются 28 дней отпуска.
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_9" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Учитываются 28 дней отпуска и 118 выходных дней с учетом всех праздников.
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									<div id="box_10" class="message-frame" style="left:-225px; width:450px;">
+										Информация
+										<div class="dots" style="height:150px; ">
+											 
+										<div align="center">
+											<br/>Это свободное время от сна и работы. Учитываются 28 дней отпуска
+											<br/><br/>
+											 
+											<div style="width:100px" align="center" class="answer">OK</div>
+										 
+										</div>
+										</div>
+									</div>
+									
+									
+				
+							</div>
+					
+				</div>
+				
+			</div>
+			
+			<div class="sidebar_right">
+				<div class="inner-sidebar_right">
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<footer>
+			<div class="inner-footer">
+			</div>
+		</footer>
+	</div>	
+		
+	</div>
+</body>
+
+</html>
