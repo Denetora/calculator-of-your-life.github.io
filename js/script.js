@@ -31,15 +31,19 @@ jQuery("document").ready(function(){
 		grego_days = 0;
 			
 	
-	function gregoDays(razn_year){
-		var vis_year = 0;
+	function gregoDays(year1, year2){
+			var vis_year = 0;
 			
-		vis_year = razn_year % 4;
-		vis_year = razn_year - vis_year;
-		vis_year = vis_year / 4;
-		
-		return vis_year;
-	}
+			for (var i = jQuery("#year1").val();
+				 i <= jQuery("#year2").val();
+				 i++) 
+				{
+				if((i%4 == 0 && i%100 != 0) || (i%400 == 0)){
+					vis_year += 1;
+				}	
+			}
+			return vis_year;		
+		}
 
 
 	jQuery("input").on('keyup', function(){
